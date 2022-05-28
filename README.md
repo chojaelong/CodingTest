@@ -17,7 +17,7 @@
 - 가장 빠르게 증가하는 항만을 고려하는 표기법.
     - 함수의 상한만을 나타나게
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled.png)
+![Untitled](image/Untitled.png)
 
  
 
@@ -67,7 +67,7 @@ print("time:", endtime - start_time) #수행 시간 출력
 
 ### 지수 표현 방식
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%201.png)
+![Untitled](image/Untitled%201.png)
 
 - 1e9 = 10의 9제곱(1,000,000,000)
 
@@ -104,7 +104,7 @@ print("time:", endtime - start_time) #수행 시간 출력
     ```
     
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%202.png)
+![Untitled](image/Untitled%202.png)
 
 - 인덱싱
     - 인덱스 값은 양의 정수와 음의 정수를 모두 넣을 수 있음
@@ -155,7 +155,7 @@ print("time:", endtime - start_time) #수행 시간 출력
     array = [i * i for i in range(1, 10)]
     ```
     
-    ![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%203.png)
+    ![Untitled](image/Untitled%203.png)
     
 - 반복문 `_` : 반복을 하되, 내부적인 변수는 무시할 때
 
@@ -164,7 +164,7 @@ for _ in range(5):
 	print("Hello")
 ```
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%204.png)
+![Untitled](image/Untitled%204.png)
 
 - 특정 값을 가지는 원소를 모두 제거하기
 
@@ -218,7 +218,7 @@ print(a[1 : 4])
 - 변경 불가능한 자료형을 키로 사용
 - `dict()` 함수로 초기화
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%205.png)
+![Untitled](image/Untitled%205.png)
 
 - 사전의 Key값을 리스트로 만들때 : `data.keys()`
 - 사전의 value값을 리스트로 만들 때 : `data.values()`
@@ -291,9 +291,9 @@ data = sys.stdin.readline().rstrip()
 - **코드의 블록(Block)을 들여쓰기(Indent)로 지정**
 - `if ~ elif ~ else` 순서로 적용
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%206.png)
+![Untitled](image/Untitled%206.png)
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%207.png)
+![Untitled](image/Untitled%207.png)
 
 - 조건부 표현식
     - `result = "Success" if score >= 80 else "Fail"`
@@ -359,7 +359,7 @@ def 함수명(매개변수):
     
 - 함수는 여러 개의 반환 값을 가질 수 있음
     
-    ![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%208.png)
+    ![Untitled](image/Untitled%208.png)
     
 
 ### 람다 표현식
@@ -412,7 +412,7 @@ print(sorted(array, key=lambda x: x[1]))
 - 순열 : 서로 다른 n개에서 서로 다른 r개를 선택하여 일렬로 나열하는 것
 - 조합 : 서로 다른 n개에서 순서에 상관 없이 서로 다른 r개를 선택하는 것
 
-![Untitled](3%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20-%20%E1%84%8F%E1%85%A9%E1%84%90%E1%85%A6%20826753dcd44542c5b44facf3fc632384/Untitled%209.png)
+![Untitled](image/Untitled%209.png)
 
 ```python
 # 순열
