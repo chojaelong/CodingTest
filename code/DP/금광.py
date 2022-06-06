@@ -22,4 +22,5 @@ for i in range(t):
 
     answer.append(max(map(max, dp)))
 
-print(answer)
+for i in answer:
+    print(i)
