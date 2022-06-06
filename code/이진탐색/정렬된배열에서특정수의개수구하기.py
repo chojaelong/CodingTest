@@ -10,5 +10,5 @@ print(leftIndex)
 
 if(leftIndex == n):
     print(-1)
-
-print(rightIndex - leftIndex)
+else:
+    print(rightIndex - leftIndex)
