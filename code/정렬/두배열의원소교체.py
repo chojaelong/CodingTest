@@ -2,14 +2,14 @@ n, k = map(int, input().split())
 arrayA = list(map(int, input().split()))
 arrayB = list(map(int, input().split()))
 
-for _ in range(k):
-    max_value = max(arrayB)
-    min_value = min(arrayA)
-    max_index = arrayB.index(max_value)
-    min_index = arrayA.index(min_value)
-    if min_value >= max_value:
+arrayA.sort()
+arrayB.sort(reverse=True)
+
+for i in range(k):
+    if arrayA[i] < arrayB[i]:
+        arrayA[i], arrayB[i] = arrayB[i], arrayA[i]
+    else:
         break
-    arrayA[min_index], arrayB[max_index] = arrayB[max_index], arrayA[min_index]
 
 print(arrayA)
 print(arrayB)
