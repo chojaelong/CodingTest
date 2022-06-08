@@ -7,17 +7,25 @@ def solution():
     box = []
     pick = 0
     count = 0
+    array = [[] for _ in range(len(board))]
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            array[i].append(board[j][i])
+    
+    for i in array:
+        i.reverse()
+
     for i in moves:
         # 다 0일 경우
-        if board[i-1].count(0) == len(board[i-1]):
+        if array[i-1].count(0) == len(array[i-1]):
             continue
 
-        pick = pop(board[i-1])
+        pick = pop(array[i-1])
         if len(box) == 0:
             box.append(pick)
         elif pick == box[len(box)-1]:
             box.pop()
-            count += 1
+            count += 2
         else:
             box.append(pick)
     
@@ -25,11 +33,9 @@ def solution():
         
 def pop(array):
     value = array.pop()
-    array.insert(0, 0)
     if value == 0:
-        pop(array)
-    
-    
+        return pop(array)
+
     return value
 
 solution()
