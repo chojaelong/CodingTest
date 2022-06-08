@@ -8,9 +8,6 @@ def solution(record):
         elif array[0] == "Change":
             if uid.get(array[1]) != None:
                 uid[array[1]] = array[2]
-        # array[0] = func, array[1] = id
-        elif array[0] == "Leave":
-            uid.pop(array[1])
     
     answer = []
 
