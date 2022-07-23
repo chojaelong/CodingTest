@@ -9,4 +9,7 @@ for i in range(n - 1):
         if sum(array[i:j+1]) == s:
             answer = min(len(array[i:j]), answer)
 
-print(answer)
+if answer == 100001: 
+    print(0) 
+else: 
+    print(answer)
