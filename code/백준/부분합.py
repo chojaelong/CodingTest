@@ -1,15 +1,20 @@
 # https://www.acmicpc.net/problem/1806
 
-n, s = map(int, input().split())
-array = list(map(int, input().split()))
-
-answer = 1000001
-for i in range(n - 1):
-    for j in range(i+1, n):
-        if sum(array[i:j+1]) == s:
-            answer = min(len(array[i:j]), answer)
-
-if answer == 100001: 
-    print(0) 
-else: 
-    print(answer)
+N, S = map(int,input().split())
+nums = list(map(int,input().split()))
+i, j = 0, 0
+s = nums[0]
+ans = 100001
+ 
+while True:
+    if s >= S:
+        s -= nums[i]
+        ans = min(ans, j - i + 1)
+        i += 1
+    else:
+        j += 1
+        if j == N:
+            break
+        s += nums[j]
+ 
+print(0) if ans == 100001 else print(ans)

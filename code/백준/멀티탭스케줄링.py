@@ -1,6 +1,5 @@
 # https://www.acmicpc.net/problem/1700
 # 멀티탭 스케줄링
-from asyncore import close_all
 import sys
 input = sys.stdin.readline
 N, K = map(int, input().split())
