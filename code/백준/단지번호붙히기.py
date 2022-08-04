@@ -37,5 +37,6 @@ for x in range(n):
             answer.append(value)
 
 answer.sort()
+print(len(answer))
 for i in answer:
     print(i)
