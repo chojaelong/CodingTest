@@ -42,10 +42,18 @@ def solution(invitationPairs):
     print(temp)
     temp = sorted(temp, key=lambda x: x[1], reverse=True)
     print(temp)
-    answer = [temp[i][0] for i in range(3)]
+    
+    if len(temp) < 3:
+        answer = [temp[i][0] for i in range(len(temp))]
+    else:
+        answer = [temp[i][0] for i in range(3)]
     
     return answer
 
+invitationPairs1 = [[1, 2], [2, 3], [2, 3], [2, 5], [5, 6], [5, 7], [6, 8], [2, 9]]
+invitationPairs2 = [[1, 2], [1, 3], [3, 4], [4, 5], [4, 6], [4, 7]]
+invitationPairs3 = [[1, 2], [3, 4]]
 
-invitationPairs = [[1, 2], [1, 3], [3, 4], [4, 5], [4, 6], [4, 7]]
-print(solution(invitationPairs))
+print(solution(invitationPairs1))
+print(solution(invitationPairs2))
+print(solution(invitationPairs3))
