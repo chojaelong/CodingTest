@@ -86,7 +86,7 @@ def back_tracking(n, array):
         back_tracking(n, array)
         array.pop()
         
-# 조합()
+# 조합
 def combination(n):
     global max_value
     
