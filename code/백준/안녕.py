@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/1535
+
 n = int(input())
 
 health = [0] + list(map(int, input().split()))
