@@ -1,3 +1,2 @@
-array = list(map(int, input()))
-
-print(array)
+s = 'A5AGH'
+print(len(s))
