@@ -1,2 +1,3 @@
-s = 'A5AGH'
-print(len(s))
+s = 'abcd'
+v = ''
+print(v in s)
