@@ -4,7 +4,7 @@ def solution(n, left, right):
     answer = []
     for i in range(left, right + 1):
         quotient = i // n # 1
-        remainder = i % n # 4
+        remainder = (i % n) + 1 # 4
         
         if quotient + 1 >= remainder:
             answer.append(quotient + 1)
@@ -12,5 +12,6 @@ def solution(n, left, right):
             answer.append(remainder)
     
     return answer
+            
             
 solution(4, 7, 14)
