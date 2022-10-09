@@ -1,7 +1,4 @@
 from collections import Counter
 
-array1 = [[1, 1], [1, 1]]
-counter = Counter(array1)
-print(counter)
-array2 = [0, 0, 1]
-print(any(array2))
+array = [1, 2, 3, 4]
+print(array[2:1])
