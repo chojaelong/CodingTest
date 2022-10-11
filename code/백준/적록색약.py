@@ -5,7 +5,6 @@ from collections import deque
 def bfs(x, y, array, visited):
     queue = deque([(x, y)])
     
-    
     # 동 서 남 북
     dx = [0, 0, -1, 1]
     dy = [1, -1, 0, 0]
