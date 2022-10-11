@@ -1,4 +1,6 @@
 # https://www.acmicpc.net/problem/2096
+import sys
+input = sys.stdin.readline
 
 n = int(input())
 maxD = [[0 for _ in range(3)] for _ in range(2)]
