@@ -1,5 +1,8 @@
 from collections import Counter
 
-array = [True, True, 1]
-array.count
-print(all(array))
+nums = ['50', '*', '6', '-', '3', '*', 2]
+idx = nums.index('*')
+value = eval(nums[idx - 1] + nums[idx] + nums[idx + 1])
+del nums[idx + 1], nums[idx], nums[idx - 1]
+nums.insert(idx - 1, str(value))
+print(nums)
