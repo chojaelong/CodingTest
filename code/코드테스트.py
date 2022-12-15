@@ -1,3 +1,11 @@
-move_set = set()
-move_set.add((1,1,2,1))
-print(move_set)
+from collections import deque
+
+array = [1, 2, 3]
+queue = deque(array)
+queue.popleft()
+queue.popleft()
+queue.popleft()
+
+while queue:
+    print(1)
+    break
