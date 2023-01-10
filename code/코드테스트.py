@@ -1,5 +1,5 @@
 from collections import deque
 from dateutil.relativedelta import relativedelta
 
-a = 646
-print(int(a / 10) % 10)
+for i in range(5, 0, -1):
+    print(i)
