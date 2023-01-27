@@ -1,20 +1,29 @@
 # https://programmers.co.kr/learn/courses/30/lessons/42584
 
 def solution(prices):
-    answer = [0] * len(prices)
-    for i in range(len(prices) - 1):
-        count = 0
-        for j in range(i + 1, len(prices)):
-            count += 1
-            if prices[i] <= prices[j]:
-                if j == len(prices) - 1:
-                    answer[i] = count
-                    break
-                continue
+    # answer = 몇초 후 가격이 떨어지는지 저장하는 배열
+    answer = [len(prices)-i-1 for i in range(len(prices))]
+    
+    # stack = prices의 인덱스를 차례로 담아두는 배열
+    stack = [0]
+    
+    for i in range(1, len(prices)):
+        while stack:
+            index = stack[-1]
+            
+            # 주식 가격이 떨어졌다면
+            if prices[index] > prices[i]:
+                answer[index] = i - index
+                stack.pop()
+            
+            # 떨어지지 않았다면 다음 시점으로 넘어감 (주식 가격이 계속 증가하고 있다는 말)
             else:
-                answer[i] = count
                 break
-
+        
+        # 스택에 추가한다.
+        # 다음 시점으로 넘어갔을 때 다시 비교 대상이 될 예정이다.
+        stack.append(i)
+        
     return answer
 
 print(solution([1, 2, 3, 2, 3]))
