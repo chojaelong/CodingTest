@@ -1,0 +1,23 @@
+def solution(cards1, cards2, goal):
+    idx1 = 0
+    f1 = False
+    idx2 = 0
+    f2 = False
+    idx3 = 0
+    
+    while idx3 < len(goal) :
+        if not f1 and cards1[idx1] == goal[idx3]:
+            idx1 += 1
+            if len(cards1) == idx1:
+                f1 = True
+        elif not f2 and cards2[idx2] == goal[idx3]:
+            idx2 += 1
+            if len(cards2) == idx2:
+                f2 = True
+        else:
+            return "No"
+        idx3 += 1
+    
+    return "Yes"
+
+solution(["i", "drink", "water"],["want", "to"],["i", "want", "to", "drink", "water"])
