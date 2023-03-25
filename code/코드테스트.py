@@ -1,24 +1,21 @@
-n = int(input())
-array = [list(map(int, input().split())) for _ in range(n)]
-answer = 0
+# dp = [0] * 12
+# dp[1] = 1
+# dp[2] = 1
 
-def back_tracking(x, y, value):
-    global answer
-    # 위, 오른쪽
-    dx = [-1, 0]
-    dy = [0, 1]
+# def fibo(num):
+#     if num == 1 or num == 2:
+#         return 1
+    
+#     elif dp[num] != 0:
+#         return dp[num]
+    
+#     else:
+#         dp[num] = fibo(num - 2) + fibo(num - 1)
+#         return dp[num]
 
-    # 종료 조건
-    if x == 0 and y == n - 1:
-        answer = max(answer, value)
-        return
+# fibo(10)
 
-    for i in range(2):
-        nx = x + dx[i]
-        ny = y + dy[i]
+# print(dp)
 
-        if 0 <= nx < n and 0 <= ny < n:
-            back_tracking(nx, ny, value + array[nx][ny])
-
-back_tracking(n - 1, 0, array[n - 1][0])
-print(answer)
+a = '[({()})]'
+arr = []
