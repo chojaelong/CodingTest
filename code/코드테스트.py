@@ -1,21 +1,22 @@
-# dp = [0] * 12
-# dp[1] = 1
-# dp[2] = 1
+def solution(C):
+    idx = -1
+    history = []
 
-# def fibo(num):
-#     if num == 1 or num == 2:
-#         return 1
-    
-#     elif dp[num] != 0:
-#         return dp[num]
-    
-#     else:
-#         dp[num] = fibo(num - 2) + fibo(num - 1)
-#         return dp[num]
+    for command, word in C:
+        if command == "BACK" and idx != 0:
+            idx -= 1
 
-# fibo(10)
+        elif command == "NEXT" and idx != len(history) - 1:
+            idx += 1
+        
+        elif command == "PUSH":
+            history = history[: idx + 1]
+            history.append(word)
+            idx += 1
+        
+        print(history)
 
-# print(dp)
+    answer = history[idx]
+    return answer
 
-a = '[({()})]'
-arr = []
+solution([["PUSH","www.domain1.com"],["PUSH","www.domain2.com"],["PUSH","www.domain3.com"],["BACK","1"],["BACK","1"],["PUSH","www.domain4.com"]])
