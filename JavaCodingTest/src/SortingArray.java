@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SortingArray {
     public static void main(String[] args) {
@@ -11,6 +12,16 @@ public class SortingArray {
 
         Arrays.sort(arr, Comparator.comparing((int[] o) -> o[0]).thenComparing((int[] o) -> -o[1]).thenComparing((int[] o) -> o[2]));
         System.out.println("arr = " + Arrays.deepToString(arr));
+
+        int[] array = new int[]{1, 2, 3};
+        List<Integer> list = new ArrayList<>(Arrays.stream(array).boxed().collect(Collectors.toList()));
+        array = list.stream().mapToInt(i -> i).toArray();
+        System.out.println("list = " + list);
+        System.out.println("array = " + Arrays.toString(array));
+
+        //stack : push / pop
+        //queue : add / remove
+        Deque q = new ArrayDeque(Arrays.asList(array));
 
     }
 }
