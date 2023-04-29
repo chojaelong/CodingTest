@@ -20,3 +20,4 @@ def solution(C):
     return answer
 
 solution([["PUSH","www.domain1.com"],["PUSH","www.domain2.com"],["PUSH","www.domain3.com"],["BACK","1"],["BACK","1"],["PUSH","www.domain4.com"]])
+
